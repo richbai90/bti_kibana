@@ -1,0 +1,43 @@
+{
+  "name": "sw_elastic",
+  "version": "1.0.0",
+  "description": "An express server wrapping the elastic API to add integration with Supportworks",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.3.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.1",
+    "follow-redirects": "^1.7.0",
+    "passport": "^0.4.0",
+    "passport-custom": "^1.0.5",
+    "passport-http-header-strategy": "^1.0.4",
+    "pino": "^5.11.1",
+    "swagger-express-middleware": "^2.0.1",
+    "xmlmc": "^1.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "mocha": "^6.1.3",
+    "nodemon": "^1.18.10",
+    "pino-pretty": "^2.5.0",
+    "prettier": "^1.16.4",
+    "supertest": "^3.4.2"
+  },
+  "author": "Rich Baird <https://github.com/richbai90>"
+}

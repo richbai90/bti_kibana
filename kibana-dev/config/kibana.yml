@@ -1,0 +1,13 @@
+supportworks.elasticsearch.url: http://elasticsearch:9200
+elasticsearch.hosts: ["http://localhost:19200"]
+elasticsearch.requestHeadersWhitelist: [ x-proxy-user, cookie ]
+server.basePath: '/insights'
+server.host: 0.0.0.0
+supportworks.session.secretkey: the-password-must-be-at-least-32-characters-long
+supportworks.session.isSecure: false
+supportworks.local.groups: [ public ]
+supportworks.remote_user: 'session'
+logging.verbose: true
+xpack.spaces.enabled: false
+server.defaultRoute: /app/supportworks
+#elasticsearch.logQueries: true

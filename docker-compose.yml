@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  elasticsearch:
+    image: "docker.elastic.co/elasticsearch/elasticsearch:6.7.1"
+    environment:
+      - "discovery.type=single-node"
+    volumes:
+      - esdata_dev:/usr/share/elasticsearch/data
+  kibana_dev:
+    build: "./kibana-dev"
+    stdin_open: true
+    tty: true
+    volumes:
+      - "./kibana-dev/kibana-extra/:/usr/share/elasticsearch/kibana-extra"
+      - "./kibana-dev/config/:/usr/share/elasticsearch/kibana/config"
+    networks:
+      default:
+        aliases:
+          - "kibana"
+    ports:
+      - "5601:5601"
+  proxy:
+    image: "openresty/openresty:stretch-fat"
+    volumes:
+      - "./nginx/conf:/etc/nginx/conf.d/"
+    ports:
+      - "80:80"
+    networks:
+      default:
+        aliases:
+          - swapi
+          - elk.proxy
+  auth:
+    build: "./sw_auth_middleware"
+volumes:
+  esdata_dev:
+    driver: local
