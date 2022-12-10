@@ -14,18 +14,18 @@
     "lint:fix": "eslint --fix -c .eslintrc.json {server,test}/**"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.4",
     "cookie-session": "^1.3.3",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-http-proxy": "^1.5.1",
     "follow-redirects": "^1.7.0",
     "passport": "^0.4.0",
     "passport-custom": "^1.0.5",
     "passport-http-header-strategy": "^1.0.4",
     "pino": "^5.11.1",
-    "swagger-express-middleware": "^2.0.1",
+    "swagger-express-middleware": "^4.0.2",
     "xmlmc": "^1.4.2"
   },
   "devDependencies": {
